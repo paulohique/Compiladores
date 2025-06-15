@@ -1,10 +1,10 @@
 import re
 
-# Tokens e códigos
+
 OPERADORES = {'+': 'Sim_adição', '-': 'Sim_subtração', '*': 'Sim_multiplicação', '/': 'Sim_divisão'}
 PARENTESES = {'(': 'Abre_parênteses', ')': 'Fecha_parênteses'}
 
-# Analisador léxico
+
 def analisar_tokens(expressao):
     tokens = []
     expressao = expressao.replace(" ", "")
@@ -23,7 +23,7 @@ def analisar_tokens(expressao):
 
     return tokens
 
-# Parser com derivação baseada na gramática G1
+
 def analisar_gramatica(tokens):
     pos = 0
 
@@ -82,7 +82,7 @@ def analisar_gramatica(tokens):
     except Exception as e:
         return [str(e)]
 
-# Função principal
+
 def processar_expressao(expressao):
     print("Expressão:")
     print(expressao)
